@@ -12,16 +12,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@mantine/charts": "^7.4.1",
-    "@mantine/core": "^7.4.1",
-    "@mantine/dates": "^7.4.1",
-    "@mantine/hooks": "^7.4.1",
+    "@mantine/charts": "^7.4.2",
+    "@mantine/core": "^7.4.2",
+    "@mantine/dates": "^7.4.2",
+    "@mantine/hooks": "^7.4.2",
     "dayjs": "^1.11.10",
+    "papaparse": "^5.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "recharts": "^2.10.4"
   },
   "devDependencies": {
+    "@types/papaparse": "^5.3.14",
     "@types/react": "^18.2.43",
     "@types/react-dom": "^18.2.17",
     "@typescript-eslint/eslint-plugin": "^6.19.0",

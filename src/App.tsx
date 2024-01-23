@@ -1,7 +1,7 @@
 import '@mantine/core/styles.css';
+import '@mantine/charts/styles.css';
 import { AppShell, MantineProvider, Title } from '@mantine/core';
-import { LineChart } from '@mantine/charts';
-import { data } from './data';
+import Dashboard from './components/Dashboard';
 
 function App() {
     return (
@@ -11,7 +11,9 @@ function App() {
                     <Title px="md">Real Estate Dashboard</Title>
                 </AppShell.Header>
 
-                <AppShell.Main>Main</AppShell.Main>
+                <AppShell.Main w="100vw">
+                    <Dashboard />
+                </AppShell.Main>
             </AppShell>
         </MantineProvider>
     );
