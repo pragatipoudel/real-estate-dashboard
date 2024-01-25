@@ -1,32 +1,32 @@
 import { useMemo, useState } from 'react';
 
 export function useFilters() {
-    const [minDate, setMinDate] = useState('2018-03-31');
-    const [maxDate, setMaxDate] = useState('2019-03-31');
-    const [regionName, setRegionName] = useState('New York, NY');
+    const [date, setDate] = useState<[Date | null, Date | null]>([
+        new Date('2022-01-15'),
+        new Date('2023-12-15'),
+    ]);
+    const [regionName, setRegionName] = useState(['New York, NY']);
 
     return {
-        minDate,
-        maxDate,
+        date,
+        setDate,
         regionName,
-        setMinDate,
-        setMaxDate,
         setRegionName,
     };
 }
 
 export function useFilteredData(filters, dataset) {
-    const { minDate, maxDate, regionName } = filters;
+    const { date, regionName } = filters;
 
     const filteredData = useMemo(
         () =>
             dataset.filter(
                 (entry) =>
-                    entry.Date >= minDate &&
-                    entry.Date <= maxDate &&
-                    entry.RegionName === regionName,
+                    new Date(entry.Date) >= date[0] &&
+                    new Date(entry.Date) <= date[1] &&
+                    regionName.includes(entry.RegionName),
             ),
-        [dataset, maxDate, minDate, regionName],
+        [dataset, date, regionName],
     );
     return filteredData;
 }

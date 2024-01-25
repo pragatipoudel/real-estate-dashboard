@@ -1,4 +1,5 @@
 import '@mantine/core/styles.css';
+import '@mantine/dates/styles.css';
 import '@mantine/charts/styles.css';
 import { AppShell, MantineProvider, Title } from '@mantine/core';
 import Dashboard from './components/Dashboard';
