@@ -12,9 +12,7 @@ function App() {
                     <Title px="md">Real Estate Dashboard</Title>
                 </AppShell.Header>
 
-                <AppShell.Main w="100vw">
-                    <Dashboard />
-                </AppShell.Main>
+                <Dashboard />
             </AppShell>
         </MantineProvider>
     );
